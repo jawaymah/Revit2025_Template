@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>Application Tools</Name>
+		<Assembly>Gamal\MechanicalToolsAddin.dll</Assembly>
+		<FullClassName>MechanicalToolsAddin.App</FullClassName>
+		<ClientId>851C0140-8B0E-42F4-AADE-A23C60DD9D4C</ClientId>
+		<VendorId>Gamal</VendorId>
+		<VendorDescription>Gamal</VendorDescription>
+	</AddIn>
+</RevitAddIns>

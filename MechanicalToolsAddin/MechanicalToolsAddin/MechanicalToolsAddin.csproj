@@ -42,4 +42,8 @@
     </None>
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="&#xD;&#xA;if exist &quot;$(AppData)\Autodesk\REVIT\Addins\2025&quot; copy &quot;$(ProjectDir)*.addin&quot; &quot;$(AppData)\Autodesk\REVIT\Addins\2025&quot;&#xD;&#xA;&#xD;&#xA;if not exist &quot;$(AppData)\Autodesk\REVIT\Addins\2025\Gamal&quot; mkdir &quot;$(AppData)\Autodesk\REVIT\Addins\2025\Gamal&quot;&#xD;&#xA;if exist &quot;$(AppData)\Autodesk\REVIT\Addins\2025\Gamal&quot; copy &quot;$(ProjectDir)$(OutputPath)*.dll&quot; &quot;$(AppData)\Autodesk\REVIT\Addins\2025\Gamal&quot;&#xD;&#xA;if $(ConfigurationName) == Debug copy &quot;$(ProjectDir)bin\Debug\net8.0-windows\*.dll&quot; &quot;$(AppData)\Autodesk\REVIT\Addins\2025\Gamal&quot;&#xD;&#xA;" />
+  </Target>
+
 </Project>
